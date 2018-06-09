@@ -6,9 +6,9 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 
 # Build Guide
 ## Table of Contents
-- [Parts List](https://github.com/webdes03/SmartThingsPublic/tree/master/devicetypes/webdes03/wifi-irrigation.src#parts-list)
-- [Assembly](https://github.com/webdes03/SmartThingsPublic/tree/master/devicetypes/webdes03/wifi-irrigation.src#assembly)
-    - [Manifold](https://github.com/webdes03/SmartThingsPublic/tree/master/devicetypes/webdes03/wifi-irrigation.src#manifold-1)
+- [Parts List](https://github.com/webdes03/wifi-irrigation#parts-listparts-list)
+- [Assembly](https://github.com/webdes03/wifi-irrigation#parts-list#assembly)
+    - [Manifold](https://github.com/webdes03/wifi-irrigation#manifold-1)
 
 ## Parts List
 ### Controller
@@ -47,7 +47,7 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 ## Assembly
 ### Manifold
 
-![Assembly Animation](https://github.com/webdes03/SmartThingsPublic/blob/master/devicetypes/webdes03/wifi-irrigation.src/Assembly%20Animation.gif)
+![Assembly Animation](https://github.com/webdes03/wifi-irrigation/blob/master/Assembly%20Animation.gif)
 
 1.	Using one of your pieces of 2” PVC, connect the garden hose adapter to one end, and the tee connector to the other.
 2.	With another piece of 2” PVC, connect an elbow connector to one side, and insert the other side into one of the 3/4" to 1/2" reducers (this is the reducer without any threads). Then insert the end with the reducer into one of the 3/4" to MIPT threaded adapters (which will later screw into one of the valves). Repeat this step so we have a second one for the second valve.
@@ -55,11 +55,11 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 4.	With one of the valves, connect one of the elbow subassemblies to the source side of the valve (as noted by the direction of the arrow). Connect one of the 4-port manifold subassemblies to the output side of the valve. Repeat this step with the second valve.
 5.	Lastly, using the two remaining 2” pieces of PVC, connect the elbow ends of the valve subassemblies to each side of the tee connector.
 
-![Assembly Animation](https://github.com/webdes03/SmartThingsPublic/blob/master/devicetypes/webdes03/wifi-irrigation.src/Assembly%20Complete.png)
+![Assembly Animation](https://github.com/webdes03/wifi-irrigation/blob/master/Assembly%20Complete.png)
 
 ### Controller
 
 ## Software & Automation
-- [Particle Photon Sketch](https://github.com/webdes03/SmartThingsPublic/blob/master/devicetypes/webdes03/wifi-irrigation.src/wifi-irrigation.ino)
-- [SmartThings Device Type](https://github.com/webdes03/SmartThingsPublic/blob/master/devicetypes/webdes03/wifi-irrigation.src/wifi-irrigation.groovy)
+- [Particle Photon Sketch](https://github.com/webdes03/wifi-irrigation/blob/master/wifi-irrigation.ino)
+- [SmartThings Device Type](https://github.com/webdes03/SmartThingsPublic/tree/master/devicetypes/webdes03/wifi-irrigation.src)
 
