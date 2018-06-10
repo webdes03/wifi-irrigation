@@ -24,6 +24,7 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 - [1x 20' Outdoor Extension Cord](https://amzn.to/2JkcsKH)
 - [1x PG9 Waterproof Cable Connector](https://amzn.to/2JB4mwp)
 - [3x P3 Wire Nuts](https://amzn.to/2MatAQO)
+- [2x Pipe Strap](https://amzn.to/2Jy9y0S)
 
 ### Manifold
 - [1x Garden Reel Leader Hose)](https://amzn.to/2JB5eRH)
