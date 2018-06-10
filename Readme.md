@@ -21,7 +21,7 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 - [1x Particle Relay Shield](https://amzn.to/2kX4yZ2)
 - [1x Particle Photon](https://amzn.to/2M9oNz7)
 - [1x 12VDC, 2A Power Adapter](https://amzn.to/2Lxrr0i)
-- [1x 20' Outdoor Exetension Cord](https://amzn.to/2JkcsKH)
+- [1x 20' Outdoor Extension Cord](https://amzn.to/2JkcsKH)
 - [1x PG9 Waterproof Cable Connector](https://amzn.to/2JB4mwp)
 - [3x P3 Wire Nuts](https://amzn.to/2MatAQO)
 
