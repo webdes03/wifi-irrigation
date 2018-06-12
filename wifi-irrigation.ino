@@ -19,17 +19,16 @@ permissions and limitations under the License.
 #include "RelayShield.h"
 
 // Create an instance of the RelayShield library, so we have something to talk to
-RelayShield myRelays;
+RelayShield valveRelays;
 int relayOn(String command);
 int relayOff(String command);
-
 int relayState[] = {0, 0, 0, 0, 0};
 
 STARTUP(WiFi.selectAntenna(ANT_EXTERNAL)); // selects the u.FL antenna
 
 void setup() {
     //.begin() sets up a couple of things and is necessary to use the rest of the functions
-    myRelays.begin();
+    valveRelays.begin();
     Particle.function("relayOn", relayOn);
     Particle.function("relayOff", relayOff);
 
@@ -45,14 +44,14 @@ void loop() {
 }
 
 int relayOn(String command){
-    Particle.publish("Sprinkler Valve On", command);
+    Particle.publish("Valve On", command);
     // Ritual incantation to convert String into Int
     char inputStr[64];
     command.toCharArray(inputStr,64);
     int i = atoi(inputStr);
 
     // Turn the desired relay on
-    myRelays.on(i);
+    valveRelays.on(i);
     relayState[i] = 1;
 
     // Respond
@@ -60,14 +59,14 @@ int relayOn(String command){
 }
 
 int relayOff(String command){
-    Particle.publish("Sprinkler Valve Off", command);
+    Particle.publish("Valve Off", command);
     // Ritual incantation to convert String into Int
     char inputStr[64];
     command.toCharArray(inputStr,64);
     int i = atoi(inputStr);
 
     // Turn the desired relay off
-    myRelays.off(i);
+    valveRelays.off(i);
     relayState[i] = 0;
 
     // Respond
