@@ -66,8 +66,9 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 3.  Using 4 machine screws with lock washers, mount the manifold to the top of the controller box using two pipe straps, being sure to place silicon sealant around the inside of the bolts to help ensure the waterproofing of the box.
 4.  Cut your extension cord, approximately 2 feet from the female end, and thread the male end through the PG9 connector. Clamp down the outside of the connector, then strip and reconnect the two ends of the extension cord. Cap the wires with wire nuts. Connect the 3-outlet grounded adapter to the female end of the extension cord inside the enclosure. Connect the 24VAC transformer and 12VDC transformer to the 3-outlet adapter.
 5.  Solder the valve wires to the male end of the 7-pin waterproof connector. I used pins 1/2 for valve 1 and 3/4 for valve 2. Also solder 4 wires to the matching pins of the female side of the 7-pin connector, and wire them (along with the 24VAC transformer) as shown in the schematic below. We'll use the "MAIN" (center) terminal on the relay and the "NO" (normally open) side of the relay to control the valves.
-6.  Connect the 12VDC's barrel jack to the connector on the relay shield, and insert the Particle Photon into its place on the relay shield.
-7.  Lastly, connect the pigtail from the u.Fl to RP-SMA antenna connector to the u.Fl connector on the Particle Photon, and use a piece of double-sided tape to mount the relay shield to the underside of the enclosure's lid.
+6.  Connect the 12VDC transformer's barrel jack to the connector on the relay shield, and insert the Particle Photon into its place on the relay shield.
+7.  Connect the pigtail from the u.Fl to RP-SMA antenna connector to the u.Fl connector on the Particle Photon, and screw the external wifi antenna to the lid of the enclosure.
+8.  Lastly, use a piece of double-sided tape to mount the relay shield to the underside of the enclosure's lid.
 
 ![Schematic](https://github.com/webdes03/wifi-irrigation/blob/master/Controller.png)
 
