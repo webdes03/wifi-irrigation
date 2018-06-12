@@ -80,5 +80,28 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 4.  Save the app, and click the checkmark icon to verify the sketch.
 5.  Assuming no errors are discovered, click the devices icon at the lower left of the screen, click the star icon next to the Photon you wish to flash the code to, then click the lightening bolt at the top left corner to flash the code to the Photon.
 
-- [SmartThings Device Type](https://github.com/webdes03/SmartThingsPublic/tree/master/devicetypes/webdes03/wifi-irrigation.src)
+### SmartThings Setup
 
+#### Device Handler
+Follow the steps below to manually import the wifi-irrigation device handler, or connect your SmartThings IDE to my SmartThings repo to install this device handler, or device handlers from other projects.
+
+1.  Login to your SmartThings IDE by going to https://graph.api.smartthings.com.
+2.  From the top navigation bar, select "My Device Handlers", then click "Create New Device Handler".
+3.  Select the "From Code" tab, and paste the contents of the [wifi-irrigation SmartThings Device Type](https://github.com/webdes03/SmartThingsPublic/tree/master/devicetypes/webdes03/wifi-irrigation.src) into the box, then click the "Create" button.
+4.  Click the "Publish" button at the top right.
+
+#### Devices
+1.  From the top navigation of the SmartThings IDE, select "My Devices".
+2.  Click the "New Device" button.
+3.  Enter a name for your valve (ie: Front Flower Beds), a device network id (this must be unique, so use something like "wifi-irrigation-1" where 1 is the number of the valve), and select "wifi-irrigation" at the bottom of the type list, then click the "Create" button.
+4.  Select the device that you just created (ie: Front Flower Beds), and click the "edit" link in the preferences section.
+5.  Enter the Device ID and Authorization Token that we noted when we setup the Photon, and the number of the valve/relay that this device is connected to, then click "Save".
+6.  With the device created, and configured, you should now see it listed in the SmartThings app.
+
+#### Automation
+
+For a complete overview of the automation approach for this project, review the build guide at https://mike-greene.com/wifi-irrigation.
+
+![Flower Beds](https://github.com/webdes03/wifi-irrigation/blob/master/webcore-piston-flowerbeds.png)
+![Vegetable Garden](https://github.com/webdes03/wifi-irrigation/blob/master/webcore-piston-vegetablegarden.png)
+![Timers](https://github.com/webdes03/wifi-irrigation/blob/master/webcore-piston-timers.png)
