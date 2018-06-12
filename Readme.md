@@ -9,6 +9,7 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 - [Parts List](https://github.com/webdes03/wifi-irrigation#parts-listparts-list)
 - [Assembly](https://github.com/webdes03/wifi-irrigation#parts-list#assembly)
     - [Manifold](https://github.com/webdes03/wifi-irrigation#manifold-1)
+    - [Controller](https://github.com/webdes03/wifi-irrigation#controller-1)
 
 ## Parts List
 ### Controller
@@ -56,11 +57,28 @@ Wifi-Irrigation allows for the control of up to four sprinkler valves using [Sma
 4.	With one of the valves, connect one of the elbow subassemblies to the source side of the valve (as noted by the direction of the arrow). Connect one of the 4-port manifold subassemblies to the output side of the valve. Repeat this step with the second valve.
 5.	Lastly, using the two remaining 2” pieces of PVC, connect the elbow ends of the valve subassemblies to each side of the tee connector.
 
-![Assembly Animation](https://github.com/webdes03/wifi-irrigation/blob/master/Assembly%20Complete.png)
+![Assembly Complete](https://github.com/webdes03/wifi-irrigation/blob/master/Assembly%20Complete.png)
 
 ### Controller
 
+1.  Start by drilling all of the holes in the waterproof enclosure. You'll need to drill a hole for the PG9 connector, one for the RP-SMA antenna connector, one for the 7-pin waterproof connector, and 4 holes for the pipe straps to mount the manifold to the enclosure.
+2.  Mount the PG9 connector, RP-SMA antenna connector, and 7-pin waterproof connector.
+3.  Using 4 machine screws with lock washers, mount the manifold to the top of the controller box using two pipe straps, being sure to place silicon sealant around the inside of the bolts to help ensure the waterproofing of the box.
+4.  Cut your extension cord, approximately 2 feet from the female end, and thread the male end through the PG9 connector. Clamp down the outside of the connector, then strip and reconnect the two ends of the extension cord. Cap the wires with wire nuts. Connect the 3-outlet grounded adapter to the female end of the extension cord inside the enclosure. Connect the 24VAC transformer and 12VDC transformer to the 3-outlet adapter.
+5.  Solder the valve wires to the male end of the 7-pin waterproof connector. I used pins 1/2 for valve 1 and 3/4 for valve 2. Also solder 4 wires to the matching pins of the female side of the 7-pin connector, and wire them (along with the 24VAC transformer) as shown in the schematic below. We'll use the "MAIN" (center) terminal on the relay and the "NO" (normally open) side of the relay to control the valves.
+6.  Connect the 12VDC's barrel jack to the connector on the relay shield, and insert the Particle Photon into its place on the relay shield.
+7.  Lastly, connect the pigtail from the u.Fl to RP-SMA antenna connector to the u.Fl connector on the Particle Photon, and use a piece of double-sided tape to mount the relay shield to the underside of the enclosure's lid.
+
+![Schematic](https://github.com/webdes03/wifi-irrigation/blob/master/Controller.png)
+
 ## Software & Automation
-- [Particle Photon Sketch](https://github.com/webdes03/wifi-irrigation/blob/master/wifi-irrigation.ino)
+
+### Particle Setup
+1.  Create a new Particle App
+2.  Paste the contents of the [Particle Photon sketch](https://github.com/webdes03/wifi-irrigation/blob/master/wifi-irrigation.ino) into the IDE's code window, and save the app as "wifi-irrigation".
+3.  Click the "Libraries" icon at the bottom left of the screen, and include the "RelayShield" library in the project by selecting it, then clicking the blue "Include in Project" button, then select the "wifi-irrigation" app. Click the blue "Confirm" button to continue.
+4.  Save the app, and click the checkmark icon to verify the sketch.
+5.  Assuming no errors are discovered, click the devices icon at the lower left of the screen, click the star icon next to the Photon you wish to flash the code to, then click the lightening bolt at the top left corner to flash the code to the Photon.
+
 - [SmartThings Device Type](https://github.com/webdes03/SmartThingsPublic/tree/master/devicetypes/webdes03/wifi-irrigation.src)
 

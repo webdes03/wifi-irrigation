@@ -27,13 +27,13 @@ int relayState[] = {0, 0, 0, 0, 0};
 
 STARTUP(WiFi.selectAntenna(ANT_EXTERNAL)); // selects the u.FL antenna
 
-
 void setup() {
     //.begin() sets up a couple of things and is necessary to use the rest of the functions
     myRelays.begin();
     Particle.function("relayOn", relayOn);
     Particle.function("relayOff", relayOff);
 
+    // setup the variables that we'll use for SmartThings to call in and check the valve status
     Particle.variable("valve1", &relayState[1], INT);
     Particle.variable("valve2", &relayState[2], INT);
     Particle.variable("valve3", &relayState[3], INT);
